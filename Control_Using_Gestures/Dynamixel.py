@@ -1,10 +1,5 @@
 #!c:\Python27\python.exe
 '''
-Created on Jan 7, 2014
-
-@author: Phil Williammee
-to test serial port
-dmesg | grep tty
 
 sudo chmod a+rw /dev/"ttyUSB1"
 
