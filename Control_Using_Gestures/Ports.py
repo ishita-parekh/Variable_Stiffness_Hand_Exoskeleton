@@ -1,19 +1,6 @@
 #!/usr/bin/python2.7
-'''
-Created on Nov 18, 2013
 
-@author: philwilliammee
 
-To test for available serial ports
-dmesg | grep tty
-
-For RPI only make sure user is a member of dialout group
-sudo usermod -a -G tty yourUserName
-sudo usermod -a -G dialout username
-Log off and log on again for the changes to take effect
-
-This has not been tested with multiple serial ports, I sugest only conecting one serial port for testing
-'''
 import serial
 
 class Port():
