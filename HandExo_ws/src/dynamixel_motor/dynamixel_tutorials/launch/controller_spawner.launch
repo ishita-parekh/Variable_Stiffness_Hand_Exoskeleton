@@ -1,0 +1,71 @@
+<!-- -*- mode: XML -*- -->
+
+<launch>
+    <!-- Load controller configuration to parameter server -->
+
+    <rosparam file="$(find dynamixel_tutorials)/config/index_finger_IPE.yaml" command="load"/>
+    <!-- start specified joint controllers -->
+    <node name="index_finger_IPE_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
+          args="--manager=dxl_manager
+                --port=hand_exoskeleton
+                --type=simple
+                index_finger_intermediate_phalange_extensor_controller"
+          output="screen"/>
+
+    <rosparam file="$(find dynamixel_tutorials)/config/index_finger_IPF.yaml" command="load"/>
+    <!-- start specified joint controllers -->
+    <node name="index_finger_IPF_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
+          args="--manager=dxl_manager
+                --port=hand_exoskeleton
+                --type=simple
+                index_finger_intermediate_phalange_flexor_controller"
+          output="screen"/>
+
+    <rosparam file="$(find dynamixel_tutorials)/config/index_finger_PPE.yaml" command="load"/>
+    <!-- start specified joint controllers -->
+    <node name="index_finger_PPE_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
+          args="--manager=dxl_manager
+                --port=hand_exoskeleton
+                --type=simple
+                index_finger_proximal_phalange_extensor_controller"
+          output="screen"/>
+
+    <rosparam file="$(find dynamixel_tutorials)/config/index_finger_PPF.yaml" command="load"/>
+    <!-- start specified joint controllers -->
+    <node name="index_finger_PPF_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
+          args="--manager=dxl_manager
+                --port=hand_exoskeleton
+                --type=simple
+                index_finger_proximal_phalange_flexor_controller"
+          output="screen"/>
+
+    <rosparam file="$(find dynamixel_tutorials)/config/middle_finger_IPE.yaml" command="load"/>
+    <!-- start specified joint controllers -->
+    <node name="middle_finger_IPE_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
+          args="--manager=dxl_manager
+                --port=hand_exoskeleton
+                --type=simple
+                middle_finger_intermediate_phalange_extensor_controller"
+          output="screen"/>
+
+    <rosparam file="$(find dynamixel_tutorials)/config/middle_finger_IPF.yaml" command="load"/>
+    <!-- start specified joint controllers -->
+    <node name="middle_finger_IPF_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
+          args="--manager=dxl_manager
+                --port=hand_exoskeleton
+                --type=simple
+                middle_finger_intermediate_phalange_flexor_controller"
+          output="screen"/>
+
+    <!-- Start joints trajectory controller controller -->
+    <rosparam file="$(find dynamixel_tutorials)/config/joints_trajectory_controller.yaml" command="load"/>
+    <node name="controller_spawner_meta" pkg="dynamixel_controllers" type="controller_spawner.py"
+          args="--manager=dxl_manager
+                --type=meta
+                f_arm_controller
+                index_finger_proximal_phalange_extensor_controller
+                middle_finger_intermediate_phalange_extensor_controller
+                middle_finger_intermediate_phalange_flexor_controller"
+          output="screen"/>
+
+</launch>
