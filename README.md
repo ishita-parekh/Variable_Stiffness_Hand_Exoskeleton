@@ -1,6 +1,8 @@
 # Hand_Exoskeleton
 3d printed wearable variable stiffness exoskeleton for hand
 
+Video Link: https://youtu.be/ZS-GP4a4qsU
+
 1. Install ROS kinetic - follow steps from: http://wiki.ros.org/kinetic/Installation/Ubuntu
 2. Create a catkin workspace - follow steps from: http://wiki.ros.org/catkin/Tutorials/create_a_workspace
 3. Prepare the repository
