@@ -57,7 +57,7 @@
       1. Install OpenCV version 2
       2. Configure webcam to be detected by raspberry pi
   
-  ```bash
+   ```bash
    $ cd Control_Using_Gestures
    ```
    
