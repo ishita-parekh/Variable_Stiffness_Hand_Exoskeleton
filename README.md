@@ -9,7 +9,7 @@ Video Link: https://youtu.be/ZS-GP4a4qsU
    
    Gitclone the repository to the created workspace
    ```bash
-   $ cd handexo_ws
+   $ cd ~/handexo_ws
    ```
    ```bash
    $ git clone https://github.com/isparekh/Hand_Exoskeleton.git
@@ -35,7 +35,7 @@ Video Link: https://youtu.be/ZS-GP4a4qsU
    2. Open a new terminal and run the launch file to scan how many and which dynamixels are connected
    
     ```bash
-   $ cd handexo_ws
+   $ cd ~/handexo_ws
    ```
   
     ```bash
@@ -45,7 +45,7 @@ Video Link: https://youtu.be/ZS-GP4a4qsU
    3. Open a new terminal and run the launch file to start dynamixel motors and control them
    
    ```bash
-   $ cd handexo_ws
+   $ cd ~/handexo_ws
    ```
    
    ```bash
@@ -62,7 +62,7 @@ Video Link: https://youtu.be/ZS-GP4a4qsU
       
   
    ```bash
-   $ cd Control_Using_Gestures
+   $ cd ~/Control_Using_Gestures
    ```
    
    ```bash
