@@ -1,4 +1,4 @@
-# Hand_Exoskeleton
+# Hand_Exoskeleton [WIP (Work In Progress)]
 3d printed wearable variable stiffness exoskeleton for hand
 
 Video Link: https://youtu.be/ZS-GP4a4qsU
